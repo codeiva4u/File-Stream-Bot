@@ -12,7 +12,7 @@ class Var(object):
     API_HASH = str(getenv('API_HASH', ''))
     PICS = (environ.get('PICS','')).split()
     BOT_TOKEN = str(getenv('BOT_TOKEN', ''))
-    name = str(getenv('name', 'NobitaStreamBot'))
+    name = str(getenv('name', ''))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
     BIN_CHANNEL = int(getenv('BIN_CHANNEL', ''))
@@ -22,7 +22,7 @@ class Var(object):
     OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())  
     NO_PORT = bool(getenv('NO_PORT', False))
     APP_NAME = None
-    OWNER_USERNAME = str(getenv('OWNER_USERNAME', 'CodeXBro'))
+    OWNER_USERNAME = str(getenv('OWNER_USERNAME', ''))
     if 'DYNO' in environ:
         ON_HEROKU = True
         APP_NAME = str(getenv('APP_NAME'))
@@ -36,5 +36,5 @@ class Var(object):
     else:
         URL = "http://{}/".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL', ''))
-    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'RahulReviewsYT'))
+    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', ''))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "")).split()))
